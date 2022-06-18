@@ -3,14 +3,15 @@ import logo from "./logo.svg";
 import "./App.css";
 import Wallet from "./Wallet";
 import Notifi from "./Notifi";
+import BroadcastForm from "./BroadcastForm";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <Wallet>
           <Notifi />
+          <BroadcastForm />
         </Wallet>
       </header>
     </div>
