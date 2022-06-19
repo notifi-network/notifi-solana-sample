@@ -12,7 +12,7 @@ export const Notifi: React.FC = () => {
 
   return (
     <NotifiCard
-      dappAddress="notifi"
+      dappAddress="hyperspace.xyz"
       env="Development"
       signer={adapter as MessageSigner}
       walletPublicKey={publicKey}

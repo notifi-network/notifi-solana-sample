@@ -94,7 +94,7 @@ export const ConnectedForm: React.FC<Props> = ({
   );
 
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
       <h1>Send Broadcast Message</h1>
       <select
         value={topic?.topicName ?? ""}
