@@ -4,14 +4,14 @@ import "./App.css";
 import Wallet from "./Wallet";
 import Notifi from "./Notifi";
 import BroadcastForm from "./BroadcastForm";
+import Transaction from "./Transaction";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <Wallet>
-          <Notifi />
-          <BroadcastForm />
+          <Transaction />
         </Wallet>
       </header>
     </div>
