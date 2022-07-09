@@ -19,6 +19,7 @@ export const ConnectedTransaction: React.FC<Props> = ({
   walletPublicKey,
 }: React.PropsWithChildren<Props>) => {
   const {
+    data,
     isAuthenticated,
     logOut,
     beginLoginViaTransaction,
@@ -26,7 +27,7 @@ export const ConnectedTransaction: React.FC<Props> = ({
   } = useNotifiClient({
     dappAddress: "notifi",
     walletPublicKey,
-    env: "Local",
+    env: "Development",
   });
 
   const [msg, setMsg] = useState<string>("");
@@ -87,6 +88,7 @@ export const ConnectedTransaction: React.FC<Props> = ({
       <button onClick={makeMemo}>Make Memo</button>
       <div>{`Signature: ${sig}`}</div>
       <button onClick={end}>End</button>
+      <div>{`Data: ${JSON.stringify(data)}`}</div>
     </div>
   );
 };
