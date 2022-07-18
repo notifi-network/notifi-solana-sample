@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
 import {
   NotifiEmailInput,
   NotifiFooter,
   NotifiSmsInput,
-  useNotifiSubscribe
-} from '@notifi-network/notifi-react-card';
+  useNotifiSubscribe,
+} from "@notifi-network/notifi-react-card";
 
-import { MarketingToggle } from './MarketingToggle';
+import { MarketingToggle } from "./MarketingToggle";
+import { HardwareToggle } from "./HardwareToggle";
 
 export const NotifiCardContents: React.FC = () => {
   const { loading, subscribe } = useNotifiSubscribe();
@@ -16,6 +17,7 @@ export const NotifiCardContents: React.FC = () => {
       <NotifiEmailInput disabled={loading} />
       <NotifiSmsInput disabled={loading} />
       <MarketingToggle disabled={loading} />
+      <HardwareToggle disabled={loading} />
       <button
         disabled={loading}
         type="submit"
@@ -27,5 +29,5 @@ export const NotifiCardContents: React.FC = () => {
       </button>
       <NotifiFooter />
     </>
-  )
+  );
 };

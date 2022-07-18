@@ -1,12 +1,13 @@
-import React from 'react';
-import type { MessageSigner } from '@notifi-network/notifi-core';
-import { NotifiCard } from '@notifi-network/notifi-react-card';
-import { useWallet } from '@solana/wallet-adapter-react';
+import React from "react";
+import type { MessageSigner } from "@notifi-network/notifi-core";
+import { NotifiCard } from "@notifi-network/notifi-react-card";
+import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 
-import { NotifiCardContents } from './NotifiCardContents';
+import { NotifiCardContents } from "./NotifiCardContents";
 
 export const Notifi: React.FC = () => {
-  const { wallet } = useWallet();
+  const { connection } = useConnection();
+  const { wallet, sendTransaction } = useWallet();
   const adapter = wallet?.adapter;
   const publicKey = adapter?.publicKey?.toBase58() ?? null;
 
@@ -16,6 +17,8 @@ export const Notifi: React.FC = () => {
       env="Development"
       signer={adapter as MessageSigner}
       walletPublicKey={publicKey}
+      connection={connection}
+      sendTransaction={sendTransaction}
     >
       <NotifiCardContents />
     </NotifiCard>
