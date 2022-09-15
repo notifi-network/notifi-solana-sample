@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@notifi-network/notifi-react-card": "^0.28.0",
-    "@notifi-network/notifi-react-hooks": "^0.28.0",
+    "@notifi-network/notifi-react-card": "^0.31.1-alpha.8",
+    "@notifi-network/notifi-react-hooks": "^0.31.1-alpha.8",
     "@solana/wallet-adapter-base": "^0.9.5",
     "@solana/wallet-adapter-react": "^0.15.5",
     "@solana/wallet-adapter-react-ui": "^0.9.7",
