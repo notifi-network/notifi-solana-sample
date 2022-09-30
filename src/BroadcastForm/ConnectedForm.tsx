@@ -26,6 +26,7 @@ export const ConnectedForm: React.FC<Props> = ({
 
   const { broadcastMessage, getTopics, logIn, logOut, isAuthenticated } =
     useNotifiClient({
+      walletBlockchain: "SOLANA",
       dappAddress,
       walletPublicKey,
       env: "Development",
@@ -94,7 +95,7 @@ export const ConnectedForm: React.FC<Props> = ({
   );
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <h1>Send Broadcast Message</h1>
       <select
         value={topic?.topicName ?? ""}
